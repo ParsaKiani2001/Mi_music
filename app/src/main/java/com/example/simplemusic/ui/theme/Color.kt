@@ -18,6 +18,13 @@ val PinkEnable= Color(0xff7A38E7)
 val whiteEF = Color(0xfffefefe)
 val grayE3 = Color(0xffe3e3e3)
 
+val magenta1 = Color(0xff4C14A8)
+val magenta2 = Color(0xff7244BF)
+val green1 = Color(0xff295F51)
+val green2 = Color(0xff487369)
+val orange1 = Color(0xffA46610)
+val orange2 = Color(0xffCC8D37)
+
 val DarkColors = darkColorScheme(
     onPrimaryContainer = GrayDisable, onBackground = whiteEF,
     onSurface = GrayDisable, secondary = PinkEnable, primary = BaseBlack, surface = GrayDisable

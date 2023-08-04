@@ -49,22 +49,23 @@ import com.example.simplemusic.ui.theme.whiteEF
 fun search(){
     Row(modifier = Modifier
         .fillMaxWidth()
-        .padding(5.dp, 5.dp)
-        .height(40.dp), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically){
-        Spacer(modifier = Modifier.width(2.dp))
+        .padding(4.dp, 4.dp)
+        .height(35.dp), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically){
+        Spacer(modifier = Modifier.width(5.dp))
         IconButton(onClick = { /*TODO*/ }) {
-            Icon(modifier = Modifier.size(25.dp), painter = painterResource(id = R.drawable.setting2), contentDescription = "settings")
+            Icon(modifier = Modifier.size(22.dp), painter = painterResource(id = R.drawable.setting2), contentDescription = "settings")
         }
         IconButton(modifier = Modifier
             .fillMaxWidth()
             .height(40.dp)
-            .padding(10.dp, 1.dp),onClick = { /*TODO*/ }) {
+            .padding(5.dp, 1.dp),onClick = { /*TODO*/ }) {
             Row (modifier = Modifier
                 .fillMaxSize()
                 .background(Color.Gray, RoundedCornerShape(100)), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically){
                 Icon(painter = painterResource(id = R.drawable.search), contentDescription ="", modifier = Modifier.padding(8.dp,0.dp) )
                 Text(text = "search", modifier = Modifier.fillMaxWidth(0.8f))
                 Icon(painterResource(id = R.drawable.mic), contentDescription = "", modifier = Modifier.padding(8.dp,0.dp))
+                Spacer(modifier = Modifier.width(5.dp))
             }
         }
 
@@ -84,7 +85,7 @@ fun bottomNavigation(select:Int, change: (Int) -> Unit){
             .width(100.dp),onClick = {select = 0;change(0)}) {
             Column(verticalArrangement = Arrangement.SpaceAround,horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxHeight()) {
                 Spacer(modifier = Modifier.height(2.dp))
-                Icon(painterResource(id = R.drawable.music), null, tint =if(select == 0) PinkEnable else GrayDisable, modifier = Modifier.size(33.dp))
+                Icon(painterResource(id = R.drawable.music2), null, tint =if(select == 0) PinkEnable else GrayDisable, modifier = Modifier.size(33.dp))
                 Text("Music", color = if(select == 0) PinkEnable else GrayDisable ,style = Typography.labelMedium)
                 Spacer(modifier = Modifier.height(8.dp))
             }
