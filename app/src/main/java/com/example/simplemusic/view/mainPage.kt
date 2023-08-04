@@ -37,6 +37,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.simplemusic.R
 import com.example.simplemusic.ui.theme.GrayDisable
 import com.example.simplemusic.ui.theme.IconFont
@@ -44,15 +45,17 @@ import com.example.simplemusic.ui.theme.PinkEnable
 import com.example.simplemusic.ui.theme.Typography
 import com.example.simplemusic.ui.theme.menuIcon
 import com.example.simplemusic.ui.theme.whiteEF
+import com.example.simplemusic.viewmodels.navmodels
 
 @Composable
 fun search(){
+    val nav:navmodels = viewModel()
     Row(modifier = Modifier
         .fillMaxWidth()
         .padding(4.dp, 4.dp)
         .height(35.dp), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically){
         Spacer(modifier = Modifier.width(5.dp))
-        IconButton(onClick = { /*TODO*/ }) {
+        IconButton(onClick = { nav.navigate("player") }) {
             Icon(modifier = Modifier.size(22.dp), painter = painterResource(id = R.drawable.setting2), contentDescription = "settings")
         }
         IconButton(modifier = Modifier
@@ -61,7 +64,7 @@ fun search(){
             .padding(5.dp, 1.dp),onClick = { /*TODO*/ }) {
             Row (modifier = Modifier
                 .fillMaxSize()
-                .background(Color.Gray, RoundedCornerShape(100)), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically){
+                .background(GrayDisable, RoundedCornerShape(100)), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically){
                 Icon(painter = painterResource(id = R.drawable.search), contentDescription ="", modifier = Modifier.padding(8.dp,0.dp) )
                 Text(text = "search", modifier = Modifier.fillMaxWidth(0.8f))
                 Icon(painterResource(id = R.drawable.mic), contentDescription = "", modifier = Modifier.padding(8.dp,0.dp))

@@ -32,6 +32,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowRight
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme.colorScheme
@@ -367,13 +368,14 @@ fun SongItem(){
             Modifier
                 .fillMaxWidth()
                 .fillMaxHeight()
-                .padding(10.dp, 0.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.End){
+                .padding(0.dp, 0.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.End){
             IconButton(onClick = { /*TODO*/ }) {
-                Icon(painter = painterResource(id = R.drawable.tab), contentDescription ="" )
+                Icon(Icons.Outlined.Share, contentDescription ="", modifier = Modifier.size(20.dp), tint = GrayDisable )
             }
             IconButton(onClick = { /*TODO*/ }) {
-                Icon(painter = painterResource(id = R.drawable.setting), contentDescription ="" )
+                Icon(painter = painterResource(id = R.drawable.tab), contentDescription ="" ,modifier = Modifier.size(20.dp), tint = GrayDisable)
             }
+
         }
 
     }

@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.simplemusic.page.mainPage
 import com.example.simplemusic.ui.theme.SimpleMusicTheme
+import com.example.simplemusic.utile.mainNav
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    mainPage();
+                    mainNav();
                 }
             }
         }
@@ -33,5 +34,5 @@ class MainActivity : ComponentActivity() {
 @Composable
 @Preview
 fun previewMain(){
-    mainPage()
+  mainNav()
 }
